@@ -1,0 +1,29 @@
+.root {
+  width: 150px;
+  text-align: center;
+  overflow-y: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+.photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.blank-icon {
+  font-size: 150px;;
+  color: #bbb;
+}
+
+.name {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.75rem;
+  width: 150px;
+  height:30px;
+  line-height: 30px;
+  text-align: center;
+  background: #444;
+}

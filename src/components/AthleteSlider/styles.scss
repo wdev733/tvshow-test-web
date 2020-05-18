@@ -1,0 +1,154 @@
+.driver-component {
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 140px;
+  background: #fff;
+
+  &.mobile-finished {
+    margin-top: -10px;
+  }
+
+  &.finished {
+    margin-top: 6px;
+  }
+
+  &.inprogress {
+    margin-top: 6px;
+  }
+
+  .icon {
+    width: 25px;
+  }
+
+  &.selected {
+    background: #77C8BB;
+    &.green {
+      background: #77C8BB;
+    }
+    &.black {
+      background: #545666;
+    }
+    
+    color: white;
+  }
+
+  &.left {
+    display: flex;
+
+    >*:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
+
+  &:not(.selected) {
+    .Low {
+      color: red;
+    }
+
+    .High {
+      color: rgb(97, 178, 160);
+    }
+
+    .Medium {
+      color: rgb(86, 162, 253);
+    }
+  }
+
+  color: rgb(109, 111, 148);
+  padding: 17px;
+}
+
+.panel {
+  overflow-x: auto;
+  scrollbar-width: none;
+  /* Firefox 64 */
+
+  &::-webkit-scrollbar {
+    /* Safari and Chrome */
+    display: none;
+  }
+}
+
+.container {
+  display: flex;
+  width: min-content;
+
+  >div:not(:first-child) {
+    margin-left: 20px;
+  }
+}
+
+.main {
+  position: relative;
+
+  .arrow.visible {
+    opacity: 1;
+  }
+}
+
+.arrow {
+  opacity: 0;
+  &:not(.visible) {
+    pointer-events: none;
+  }
+  transition: opacity 1s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  color: grey;
+
+  &.arrowleft {
+    left: 0;
+  }
+
+  &.arrowright {
+    right: 0;
+  }
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-content: flex-end;
+  align-items: flex-end;
+  width: 170px;
+}
+
+.progress-icon {
+  display: none;
+  color: #7f7f7f;
+  width: 16px;
+  height: 16px;
+}
+
+.progress-icon-mobile {
+  color: #7f7f7f;
+  width: 16px;
+  height: 16px;
+  z-index: 3000;
+}
+
+@media only screen and (max-width: 880px) {
+
+  .progress-icon {
+    display: block;
+    z-index: 3000;
+  }
+
+  .driver-component {
+    align-items: center;
+
+    &.finished {
+      margin-top: -10px;
+    }
+  }
+
+  .progress {
+    display: none;
+  }
+}
