@@ -125,10 +125,10 @@ const ShowDetails = (props) => {
               {cast.length > 0 && (
                 <div className={styles["extra"]}>
                   <h1>Casts</h1>
-                  {cast.map((item) => (
+                  {cast.map((item, index) => (
                     <div
                       className={styles["extra__item"]}
-                      key={`cast-${item.person.id}`}
+                      key={`cast-${item.person.id}-${index}`}
                     >
                       <img
                         className={styles.photo}
