@@ -132,7 +132,7 @@ const ShowDetails = (props) => {
                     >
                       <img
                         className={styles.photo}
-                        src={item.person.image.medium}
+                        src={item.person.image ? item.person.image.medium : ""}
                         alt=""
                       />
                       <span className={styles.text}>{item.person.name}</span>

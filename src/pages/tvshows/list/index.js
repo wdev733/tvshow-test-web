@@ -31,8 +31,8 @@ const TvShowList = (props) => {
   };
 
   const handleSearchCancel = () => {
-    setSearch('');
-  }
+    setSearch("");
+  };
 
   useEffect(() => {
     actionTvShowList("");
@@ -84,8 +84,12 @@ const TvShowList = (props) => {
                   >
                     <CardMedia
                       className={styles.media}
-                      image={show.image ? show.image.medium : ""}
-                      title="Paella dish"
+                      image={
+                        show.image
+                          ? show.image.medium
+                          : "/assets/images/movie.png"
+                      }
+                      title={show.name}
                     />
                     <CardContent>
                       <Typography
